@@ -1,4 +1,4 @@
-import { Wrapper, Img } from '../styles/MainMenu.styled'
+import { Wrapper, Img, MenuWrapper } from '../styles/MainMenu.styled'
 import Logo from '../assets/logo.svg'
 import Button from './Button'
 
