@@ -1,11 +1,12 @@
+import { Wrapper, Img } from '../styles/MainMenu.styled'
 import Logo from '../assets/logo.svg'
 import Button from './Button'
 
 const MainMenu = () => {
     return (
-        <div>
-            <img src={Logo} alt="" />
-            <div className="menu-wrapper">
+        <Wrapper>
+            <Img src={Logo} alt="" />
+            <MenuWrapper>
                 <div className="selection">
                     <p>Select Theme</p>
                     <div className="selection__buttons">
@@ -30,8 +31,8 @@ const MainMenu = () => {
                     </div>
                 </div>
                 <Button name="Start Game" />
-            </div>
-        </div>
+            </MenuWrapper>
+        </Wrapper>
     )
 }
 
