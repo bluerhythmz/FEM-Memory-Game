@@ -9,6 +9,10 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
     }
 
+    html {
+        font-size: 62.5%;
+    }
+
     body {
         font-family: 'Atkinson Hyperlegible', sans-serif;
         width: 100vw;
