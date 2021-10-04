@@ -7,17 +7,22 @@ export const Wrapper = styled.div`
 `
 
 export const MenuWrapper = styled.div`
-    max-width: 70%;
+    width: 90%;
     background-color: #FCFCFC;
     padding: 2.4rem;
     margin: 0 auto;
     border-radius: 1rem;
 `
 
-export const Img = styled.img``
+export const Title = styled.h1`
+    color: #FCFCFC;
+    font-size: 3.2rem;
+    line-height: 1.2em;
+    margin-top: 8rem;
+`
 
 export const Selection = styled.div`
-    
+    margin-bottom: 2.4rem;
 `
 
 export const SelectionText = styled.p`
@@ -25,9 +30,10 @@ export const SelectionText = styled.p`
     line-height: 1.2em;
     color: #7191A5;
     margin-bottom: 1.1rem;
+    font-weight: 700;
 `
 export const SelectionButtons = styled.div`
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat( auto-fit, minmax(50px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(20px, 1fr) );
 `
