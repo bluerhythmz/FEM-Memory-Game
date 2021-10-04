@@ -1,4 +1,5 @@
 import './App.css';
+import GlobalStyles from './styles/Global';
 
 function App() {
 
@@ -27,9 +28,9 @@ function App() {
   } */
 
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <GlobalStyles />
+    </>
   );
 }
 
