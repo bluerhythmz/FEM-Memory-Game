@@ -8,4 +8,5 @@ export const StyledButton = styled.button`
     color: #FCFCFC;
     border-radius: 2.6rem;
     background-color: #BCCED9;
+    width: 100%;
 `
