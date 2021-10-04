@@ -11,6 +11,10 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-family: 'Atkinson Hyperlegible', sans-serif;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 `
 
