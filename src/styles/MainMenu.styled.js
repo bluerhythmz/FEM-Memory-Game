@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledMainMenu = styled.div`
-    
+export const Wrapper = styled.div`
+    display: grid;
+    place-items: center;
 `

@@ -1,9 +1,10 @@
+import { Wrapper } from '../styles/MainMenu.styled'
 import Logo from '../assets/logo.svg'
 import Button from './Button'
 
 const MainMenu = () => {
     return (
-        <div>
+        <Wrapper>
             <img src={Logo} alt="" />
             <div className="menu-wrapper">
                 <div className="selection">
@@ -31,7 +32,7 @@ const MainMenu = () => {
                 </div>
                 <Button name="Start Game" />
             </div>
-        </div>
+        </Wrapper>
     )
 }
 
