@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 `
 
 export const MenuWrapper = styled.div`
-    max-width: 50%;
+    max-width: 70%;
     background-color: #FCFCFC;
     padding: 2.4rem;
     margin: 0 auto;
@@ -29,4 +29,5 @@ export const SelectionText = styled.p`
 export const SelectionButtons = styled.div`
     display: grid;
     gap: 1rem;
+    grid-template-columns: repeat( auto-fit, minmax(50px, 1fr) );
 `
