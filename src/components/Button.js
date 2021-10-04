@@ -1,8 +1,10 @@
+import { StyledButton } from '../styles/Button.styled'
+
 const Button = ({ name }) => {
     return (
-        <button>
+        <StyledButton>
             {name}
-        </button>
+        </StyledButton>
     )
 }
 
