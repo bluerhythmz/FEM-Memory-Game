@@ -1,8 +1,10 @@
 import { StyledButton } from '../styles/Button.styled'
 
-const Button = ({ name }) => {
+const Button = ({ name, state }) => {
+    let nameEqualsState = name === state
+
     return (
-        <StyledButton>
+        <StyledButton nameEqualsState={nameEqualsState}>
             {name}
         </StyledButton>
     )

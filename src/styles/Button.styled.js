@@ -7,7 +7,7 @@ export const StyledButton = styled.button`
     border: none;
     color: #FCFCFC;
     border-radius: 2.6rem;
-    background-color: #BCCED9;
+    background-color: ${(props) => props.nameEqualsState ? `#304859` : `#BCCED9`};
     width: 100%;
     font-weight: 700;
 `

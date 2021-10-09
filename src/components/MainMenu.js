@@ -1,7 +1,12 @@
 import { Wrapper, MenuWrapper, Selection, SelectionText, SelectionButtons, Title } from '../styles/MainMenu.styled'
 import Button from './Button'
+import { useState } from 'react'
 
 const MainMenu = () => {
+    const [theme, setTheme] = useState("Numbers")
+    const [players, setPlayers] = useState("1")
+    const [gridSize, setGridSize] = useState("4x4")
+
     return (
         <Wrapper>
             <Title>memory</Title>
@@ -9,24 +14,24 @@ const MainMenu = () => {
                 <Selection>
                     <SelectionText>Select Theme</SelectionText>
                     <SelectionButtons>
-                        <Button name="Numbers" />
-                        <Button name="Icons" />
+                        <Button state={theme} name="Numbers" />
+                        <Button state={theme} name="Icons" />
                     </SelectionButtons>
                 </Selection>
                 <Selection>
                     <SelectionText>Number of Players</SelectionText>
                     <SelectionButtons>
-                        <Button name="1" />
-                        <Button name="2" />
-                        <Button name="3" />
-                        <Button name="4" />
+                        <Button state={players} name="1" />
+                        <Button state={players} name="2" />
+                        <Button state={players} name="3" />
+                        <Button state={players} name="4" />
                     </SelectionButtons>
                 </Selection>
                 <Selection>
                     <SelectionText>Grid Size</SelectionText>
                     <SelectionButtons>
-                        <Button name="4x4" />
-                        <Button name="6x6" />
+                        <Button state={gridSize} name="4x4" />
+                        <Button state={gridSize} name="6x6" />
                     </SelectionButtons>
                 </Selection>
                 <Button name="Start Game" />
