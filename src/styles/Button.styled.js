@@ -11,3 +11,7 @@ export const StyledButton = styled.button`
     width: 100%;
     font-weight: 700;
 `
+
+export const StyledPrimaryButton = styled(StyledButton)`
+    background-color: #FDA214;
+`

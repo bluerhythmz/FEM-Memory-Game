@@ -7,6 +7,18 @@ const MainMenu = () => {
     const [players, setPlayers] = useState("1")
     const [gridSize, setGridSize] = useState("4x4")
 
+    const handleThemeClick = (button) => {
+        setTheme(button)
+    }
+
+    const handlePlayersClick = (button) => {
+        setPlayers(button)
+    }
+
+    const handleGridSizeClick = (button) => {
+        setGridSize(button)
+    }
+
     return (
         <Wrapper>
             <Title>memory</Title>
@@ -14,27 +26,27 @@ const MainMenu = () => {
                 <Selection>
                     <SelectionText>Select Theme</SelectionText>
                     <SelectionButtons>
-                        <Button state={theme} name="Numbers" />
-                        <Button state={theme} name="Icons" />
+                        <Button handleClick={handleThemeClick} state={theme} name="Numbers" />
+                        <Button handleClick={handleThemeClick} state={theme} name="Icons" />
                     </SelectionButtons>
                 </Selection>
                 <Selection>
                     <SelectionText>Number of Players</SelectionText>
                     <SelectionButtons>
-                        <Button state={players} name="1" />
-                        <Button state={players} name="2" />
-                        <Button state={players} name="3" />
-                        <Button state={players} name="4" />
+                        <Button handleClick={handlePlayersClick} state={players} name="1" />
+                        <Button handleClick={handlePlayersClick} state={players} name="2" />
+                        <Button handleClick={handlePlayersClick} state={players} name="3" />
+                        <Button handleClick={handlePlayersClick} state={players} name="4" />
                     </SelectionButtons>
                 </Selection>
                 <Selection>
                     <SelectionText>Grid Size</SelectionText>
                     <SelectionButtons>
-                        <Button state={gridSize} name="4x4" />
-                        <Button state={gridSize} name="6x6" />
+                        <Button handleClick={handleGridSizeClick} state={gridSize} name="4x4" />
+                        <Button handleClick={handleGridSizeClick} state={gridSize} name="6x6" />
                     </SelectionButtons>
                 </Selection>
-                <Button name="Start Game" />
+                <Button primary={true} name="Start Game" />
             </MenuWrapper>
         </Wrapper>
     )
