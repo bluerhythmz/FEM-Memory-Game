@@ -11,6 +11,7 @@ export const MenuWrapper = styled.div`
     background-color: #FCFCFC;
     padding: 2.4rem;
     margin: 0 auto;
+    margin-top: 4.5rem;
     border-radius: 1rem;
 `
 
@@ -19,6 +20,7 @@ export const Title = styled.h1`
     font-size: 3.2rem;
     line-height: 1.2em;
     padding-top: 8rem;
+    text-align: center;
 `
 
 export const Selection = styled.div`
