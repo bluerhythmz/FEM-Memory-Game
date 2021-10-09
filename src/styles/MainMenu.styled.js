@@ -18,7 +18,7 @@ export const Title = styled.h1`
     color: #FCFCFC;
     font-size: 3.2rem;
     line-height: 1.2em;
-    margin-top: 8rem;
+    padding-top: 8rem;
 `
 
 export const Selection = styled.div`
