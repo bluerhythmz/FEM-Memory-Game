@@ -11,7 +11,7 @@ import Logo from "../assets/logo.svg";
 import Score from "./Score";
 import Token from "./Token";
 
-const Game = () => {
+const Game = ({ players }) => {
   return (
     <StyledMain>
       <StyledHeader>
@@ -39,8 +39,18 @@ const Game = () => {
           <Token />
       </StyledGameGrid>
       <StyledScoreContainer>
-          <Score />
-          <Score />
+        {
+          players === 1 ? 
+          (
+            <>
+            <Score players={players} title="Time" />
+          <Score title="Moves"/>
+          </>
+          )
+          :
+          (<Score />)
+        }
+          
       </StyledScoreContainer>
     </StyledMain>
   );

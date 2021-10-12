@@ -52,7 +52,7 @@ function App() {
     <>
       <GlobalStyles />
       {gameStart ? (
-        <Game />
+        <Game players={players} />
       ) : (
         <MainMenu
           handleThemeClick={handleThemeClick}
