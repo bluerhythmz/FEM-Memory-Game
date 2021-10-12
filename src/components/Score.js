@@ -1,15 +1,19 @@
-import { StyledWrapper, StyledTitle, StyledNumber } from "../styles/Score.styled"
-import Timer from "./Timer"
+import {
+  StyledWrapper,
+  StyledTitle,
+  StyledNumber,
+} from "../styles/Score.styled";
+import { useState } from "react";
+import Timer from "./Timer";
 
-const Score = () => {
-    return (
-        <StyledWrapper>
-            <StyledTitle>P1</StyledTitle>
-            <StyledNumber>
-                <Timer />
-            </StyledNumber>
-        </StyledWrapper>
-    )
-}
+const Score = ({ title, players }) => {
+  const [count, setCount] = useState(0);
+  return (
+    <StyledWrapper>
+      <StyledTitle>{title}</StyledTitle>
+      <StyledNumber>{players === 1 ? <Timer /> : count}</StyledNumber>
+    </StyledWrapper>
+  );
+};
 
-export default Score
+export default Score;

@@ -12,6 +12,7 @@ import Score from "./Score";
 import Token from "./Token";
 
 const Game = ({ players }) => {
+  const arrayFromPlayers = Array.from(Array(players).keys())
   return (
     <StyledMain>
       <StyledHeader>
@@ -21,36 +22,36 @@ const Game = ({ players }) => {
         </StyledButtonWrapper>
       </StyledHeader>
       <StyledGameGrid>
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
-          <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
+        <Token />
       </StyledGameGrid>
       <StyledScoreContainer>
-        {
-          players === 1 ? 
-          (
-            <>
+        {players == 1 ? (
+          <>
             <Score players={players} title="Time" />
-          <Score title="Moves"/>
+            <Score title="Moves" />
           </>
-          )
-          :
-          (<Score />)
-        }
-          
+        ) : (
+          <>
+            {arrayFromPlayers.map((player) => (
+              <Score key={player} title={`P${player + 1}`} />
+            ))}
+          </>
+        )}
       </StyledScoreContainer>
     </StyledMain>
   );

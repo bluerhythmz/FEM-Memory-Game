@@ -6,7 +6,7 @@ import { useState } from "react";
 function App() {
   const [gameStart, setGameStart] = useState(true);
   const [theme, setTheme] = useState("Numbers");
-  const [players, setPlayers] = useState("1");
+  const [players, setPlayers] = useState(1);
   const [gridSize, setGridSize] = useState("4x4");
 
   const handleThemeClick = (button) => {
@@ -14,7 +14,7 @@ function App() {
   };
 
   const handlePlayersClick = (button) => {
-    setPlayers(button);
+    setPlayers(Number(button));
   };
 
   const handleGridSizeClick = (button) => {
