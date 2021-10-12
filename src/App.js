@@ -1,5 +1,6 @@
 import GlobalStyles from './styles/Global';
 import MainMenu from './components/MainMenu';
+import Game from './components/Game';
 
 function App() {
 
@@ -30,7 +31,8 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <MainMenu />
+      {/* <MainMenu /> */}
+      <Game />
     </>
   );
 }
