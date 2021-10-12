@@ -41,8 +41,6 @@ const Game = () => {
       <StyledScoreContainer>
           <Score />
           <Score />
-          <Score />
-          <Score />
       </StyledScoreContainer>
     </StyledMain>
   );

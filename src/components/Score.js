@@ -1,10 +1,13 @@
 import { StyledWrapper, StyledTitle, StyledNumber } from "../styles/Score.styled"
+import Timer from "./Timer"
 
 const Score = () => {
     return (
         <StyledWrapper>
             <StyledTitle>P1</StyledTitle>
-            <StyledNumber>3</StyledNumber>
+            <StyledNumber>
+                <Timer />
+            </StyledNumber>
         </StyledWrapper>
     )
 }

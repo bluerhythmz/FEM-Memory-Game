@@ -25,8 +25,8 @@ export const StyledGameGrid = styled.section`
   margin-bottom: 10rem;
   display: grid;
   gap: 1.2rem;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 `;
 
 export const StyledScoreContainer = styled.section`

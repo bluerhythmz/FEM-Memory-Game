@@ -2,22 +2,8 @@ import { Wrapper, MenuWrapper, Selection, SelectionText, SelectionButtons, Title
 import Button from './Button'
 import { useState } from 'react'
 
-const MainMenu = () => {
-    const [theme, setTheme] = useState("Numbers")
-    const [players, setPlayers] = useState("1")
-    const [gridSize, setGridSize] = useState("4x4")
-
-    const handleThemeClick = (button) => {
-        setTheme(button)
-    }
-
-    const handlePlayersClick = (button) => {
-        setPlayers(button)
-    }
-
-    const handleGridSizeClick = (button) => {
-        setGridSize(button)
-    }
+const MainMenu = ({ handleGameStart, handleThemeClick, handlePlayersClick, handleGridSizeClick, theme, players, gridSize }) => {
+    
 
     return (
         <Wrapper>
