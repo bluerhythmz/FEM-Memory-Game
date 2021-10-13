@@ -1,11 +1,11 @@
 import { StyledTokenWrapper, StyledFront, StyledBack, StyledInner } from "../styles/Token.styled"
 
-const Token = () => {
+const Token = ({ number }) => {
     return (
         <StyledTokenWrapper>
             <StyledInner>
                 <StyledFront></StyledFront>
-                <StyledBack>40</StyledBack>
+                <StyledBack>{number}</StyledBack>
             </StyledInner>
         </StyledTokenWrapper>
     )

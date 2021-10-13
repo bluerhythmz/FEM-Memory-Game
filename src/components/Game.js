@@ -10,9 +10,13 @@ import {
 import Logo from "../assets/logo.svg";
 import Score from "./Score";
 import Token from "./Token";
+import { generateArr } from "../utils/generateArray";
+import { shuffleArray } from "../utils/shuffleArray";
 
-const Game = ({ players }) => {
-  const arrayFromPlayers = Array.from(Array(players).keys())
+const Game = ({ players, gridSize }) => {
+  const arrayFromPlayers = Array.from(Array(players).keys());
+  let gridAmount = gridSize === "4x4" ? 8 : 16
+
   return (
     <StyledMain>
       <StyledHeader>
@@ -22,25 +26,12 @@ const Game = ({ players }) => {
         </StyledButtonWrapper>
       </StyledHeader>
       <StyledGameGrid>
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
-        <Token />
+        {shuffleArray(generateArr(gridAmount)).map((num, index) => (
+          <Token key={index} number={num.back} />
+        ))}
       </StyledGameGrid>
       <StyledScoreContainer>
-        {players == 1 ? (
+        {players === 1 ? (
           <>
             <Score players={players} title="Time" />
             <Score title="Moves" />

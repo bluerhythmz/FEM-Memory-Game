@@ -12,6 +12,7 @@ export const StyledInner = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
+  text-align: center;
   border-radius: 50%;
   transition: transform 1s ease;
   transform-style: preserve-3d;

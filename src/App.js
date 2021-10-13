@@ -28,7 +28,7 @@ function App() {
     <>
       <GlobalStyles />
       {gameStart ? (
-        <Game players={players} />
+        <Game players={players} gridSize={gridSize} />
       ) : (
         <MainMenu
           handleThemeClick={handleThemeClick}
