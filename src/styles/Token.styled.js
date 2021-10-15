@@ -16,6 +16,9 @@ export const StyledInner = styled.div`
   border-radius: 50%;
   transition: transform 1s ease;
   transform-style: preserve-3d;
+  ${'' /* &:hover {
+    transform: rotateY(180deg)
+  } */}
 `;
 
 export const StyledFront = styled.div`

@@ -16,18 +16,40 @@ import { shuffleArray } from "../utils/shuffleArray";
 const Game = ({ players, gridSize }) => {
   const arrayFromPlayers = Array.from(Array(players).keys());
   let gridAmount = gridSize === "4x4" ? 8 : 16
+  let firstClick = true
+  let pickOne, pickTwo
+  const handleClick = (button) => {
+    if (firstClick) {
+      firstClick = false
+      pickOne = button
+    } else {
+      firstClick = true
+      pickTwo = button
+      checkForMatch(pickOne, pickTwo)
+    }
+   
+    console.log(pickOne, pickTwo)
+  }
+
+  const checkForMatch = (pickOne, pickTwo) => {
+    if (pickOne === pickTwo) {
+      console.log("true")
+    } else {
+      console.log("no match")
+    }
+  }
 
   return (
     <StyledMain>
       <StyledHeader>
         <StyledImg src={Logo} alt="logo" />
         <StyledButtonWrapper>
-          <Button primary={true} name="Menu" />
+          <Button primary name="Menu" />
         </StyledButtonWrapper>
       </StyledHeader>
       <StyledGameGrid>
         {shuffleArray(generateArr(gridAmount)).map((num, index) => (
-          <Token key={index} number={num.back} />
+          <Token key={index} number={num.back} handleClick={handleClick} />
         ))}
       </StyledGameGrid>
       <StyledScoreContainer>
